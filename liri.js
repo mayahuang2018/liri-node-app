@@ -8,6 +8,8 @@ require("dotenv").config();
 //command node liri.js concert-this <artist/band name here>
 var axios = require("axios");
 
+var moment = require("moment")
+
 const concertThis = function (user_input){
 
   var queryBandsInTownUrl = "https://rest.bandsintown.com/artists/" + user_input + "/events?app_id=codingbootcamp"
@@ -24,13 +26,19 @@ const concertThis = function (user_input){
   for (i=0; i<concert.length;i++){
   console.log(i)
   //Name of the venue
-  console.log(concert[i].venue.name)
+  console.log("Name of the venue: "+concert[i].venue.name)
   
   //Venue location
-  console.log(concert[i].venue.city)
+  console.log("Venue location: "+concert[i].venue.city)
   //Date of the Event (use moment to format this as "MM/DD/YYYY")
 
-  console.log(concert[i].datetime)
+  //console.log(moment(concert[i].datetime))
+  //console.log(moment(, "MM-DD-YYYY").toDate());
+  var date = new Date(concert[i].datetime); 
+  var wrapped = moment(date); 
+
+  //var wrapped = moment(new Date(concert[i].datetime)); 
+  console.log("Date of the Event: "+wrapped.format("MM/DD/YYYY"));  
   console.log("------------------")
 }
 }
