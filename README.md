@@ -23,8 +23,9 @@ LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for mov
 
 **Node.js**
 
-##npm packages:  
-    * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
+## npm packages:  
+    
+* [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
 
    * [Axios](https://www.npmjs.com/package/axios)
 
