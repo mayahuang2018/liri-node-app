@@ -24,20 +24,16 @@ const concertThis = function (user_input){
     console.log ("Here's upcoming concerts of "+ user_input + "!")
   
   for (i=0; i<concert.length;i++){
-  console.log(i)
+  console.log(i+1)
   //Name of the venue
   console.log("Name of the venue: "+concert[i].venue.name)
   
   //Venue location
   console.log("Venue location: "+concert[i].venue.city)
+  
   //Date of the Event (use moment to format this as "MM/DD/YYYY")
-
-  //console.log(moment(concert[i].datetime))
-  //console.log(moment(, "MM-DD-YYYY").toDate());
   var date = new Date(concert[i].datetime); 
   var wrapped = moment(date); 
-
-  //var wrapped = moment(new Date(concert[i].datetime)); 
   console.log("Date of the Event: "+wrapped.format("MM/DD/YYYY"));  
   console.log("------------------")
 }
@@ -75,7 +71,7 @@ var Spotify = require("node-spotify-api");
     //console.log("Data: "+song);
 
     for(let i=0;i<song.length;i++){
-      console.log(i)
+      console.log(i+1)
       //Artist(s)
       console.log("artist(s): "+ song[i].artists);
       //The song's name
