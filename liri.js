@@ -73,7 +73,8 @@ var Spotify = require("node-spotify-api");
     for(let i=0;i<song.length;i++){
       console.log(i+1)
       //Artist(s)
-      console.log("artist(s): "+ song[i].artists);
+      //console.log(JSON.stringify(song[i].artists))
+      console.log("artist(s): "+ song[i].artists[0].name);
       //The song's name
       console.log("The song's name: "+song[i].name);
       //A preview link of the song from Spotify
